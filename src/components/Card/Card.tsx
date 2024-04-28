@@ -95,15 +95,17 @@ function Card() {
         open={open}
         aria-labelledby="form-dialog-title"
       >
-        <DialogTitle>{selectedMovie?.title}</DialogTitle>
+        <DialogTitle> Name: {selectedMovie?.title}</DialogTitle>
+        <DialogTitle>Release-date: {selectedMovie?.release_date}</DialogTitle>
+        <DialogTitle>Popularity: {selectedMovie?.popularity}</DialogTitle>
         <DialogContent>
           <img
             src={selectedMovie?.poster_path}
             style={{ width: "100%" }}
             alt=""
           />
+          <DialogTitle> {selectedMovie?.overview}</DialogTitle>
         </DialogContent>
-        <DialogTitle>{selectedMovie?.overview}</DialogTitle>
 
         <DialogActions>
           <Button onClick={handleClose} color="primary">
